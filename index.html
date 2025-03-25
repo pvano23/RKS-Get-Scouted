@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Landing Page RKS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Oswald:400,700,900|Didact Gothic" rel="stylesheet"> 
+    
+    <style>
+        body {
+            margin: 0;
+            height: 175vh;
+            display: flex; /* Enable flexbox */ 
+            flex-direction: column;
+            align-items: center;
+        }
+      
+        .container { /* Rectangle */
+            width: 99%;
+            height: 17.5%;
+            border: 3px solid black; 
+            position: relative;
+            display: flex;
+            margin-top: 2%; 
+        }
+        
+        .navbar {
+            width: 100%; /* Make navbar full width */
+            height: 26%;
+            background-color: black; 
+            position: absolute; 
+            bottom: 0;
+            justify-content: center;
+        }
+
+        .navbar ul {
+            list-style-type: none; 
+            margin: 0; 
+            padding: 28px; 
+            display: flex;
+            justify-content: center;
+        }
+        
+        .navbar a {
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+            color: white; 
+            padding: 28px 50px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+        }
+        
+        .dropdown {
+            position: relative; 
+        }
+        
+        .dropdown-content {
+            display: none; 
+            background-color: #f9f9f9; 
+            box-shadow: 0px 8px 16px 0px; 
+            flex-direction: column; 
+            align-items: center; /* Center items horizontally */
+            text-align: center; /* Center text within the items */
+            position: absolute;
+            left: 50%; /* Center the dropdown */
+            transform: translateX(-50%); /* Adjust for centering */
+            z-index: 1; /* Keeps it above other content */
+            width: 100%; /* Make dropdown width same as the button */
+            max-width: 300px; /* Set a maximum width if needed */
+        }
+      
+        .dropdown:hover .dropdown-content {
+            display: block; /* Show dropdown on hover */
+        }
+        
+        .dropdown-content a {
+            font-size: 16px;
+            color: black; /* Text color for dropdown links */
+            padding: 16px 0px; /* Padding for dropdown links */
+            text-decoration: none; /* Remove underline */
+            display: block; /* Display links as block elements */
+            margin-top: 12px;
+        }
+        
+        .navbar a:hover {
+            background-color: #A7ABAA;
+            color: black;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: gold; 
+        }
+        
+        img {
+            position: absolute;
+            bottom: 140px;
+            left: 30px;
+            height: 90px;
+            width: auto;
+        }
+      
+        .laptop-image {
+            position: absolute;
+            height: 340px; /* Adjust height as needed */
+            width: auto; /* Maintain aspect ratio */
+            bottom: 25px;
+            left: 960px;
+        }
+      
+        .title-text {
+            position: relative; 
+            text-align: left; /* Align text to the left */
+            margin-top: 25px; 
+            margin-left: 475px; /* Set left margin to 0 for alignment */
+        }
+        
+        h1 {
+            font-family: 'Oswald', serif;
+            font-weight: 900;
+            color: black;
+            font-size: 80px;
+            margin: 140px 0 20px 0;
+            text-align: left;
+        }
+        
+        h2 {
+            font-family: 'Roboto', serif;
+            color: gold;
+            font-size: 52px;
+            font-weight: 900;
+            margin: 0px;
+        }
+      
+        .body-text {
+            display: flex; /* Enable flexbox for body-text */
+            flex-direction: column; /* Align elements vertically */
+            align-items: flex-start; /* Align items at the start */
+            margin-top: 75px; /* Moves headings up or down */
+            margin-left: 20px; /* Adjust this value to align with SINCE 2024 logo */
+            margin-right: 500px; /* Keep right margin as needed */
+        }
+        
+        .heading-row {
+            display: flex; /* Use flexbox for the row */
+            align-items: center; /* Center items vertically */
+            margin-left: 200px; /* Align with the h5 container */
+        }
+        
+        h3 {
+            font-family: 'Roboto', serif;
+            color: black;
+            font-size: 62px;
+            margin: 10px; /* Margin for h3 */
+        }
+      
+        h4 {
+            font-family: 'Didact Gothic', serif;
+            color: gold;
+            font-size: 26px;
+            margin: 10px 0; /* Margin for price */
+        }
+      
+        h5 {
+            font-weight: normal;
+            font-family: 'Didact Gothic', serif;
+            color: black;
+            font-size: 32px;
+            margin: 12px 0 80px 10px; /* Adjust margin to align with previous headings */
+            align-self: flex-start; /* Align h5 with left */
+        }
+       
+        .h5-container {
+            display: flex; 
+            flex-direction: column; 
+            align-items: flex-start;
+            position: relative;
+            width: 110%;
+            margin-left: 180px; /* Adjust this value to shift it further right */
+        }
+
+        h6 {
+            font-family: 'Didact Gothic', serif;
+            color: black;
+            font-size: 26px;
+            margin-left: auto; /* Pushes text to the right */
+            align-self: flex-end; /* Align to the right */
+            margin-top: 10px; /* Adjust spacing */
+        }
+
+        .scouting-section {
+            text-align: center; /* Center the heading */
+            margin: 40px 0; /* Add some margin for spacing */
+        }
+
+        .scouting-reports {
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center columns */
+            margin-top: 20px; /* Space between heading and columns */
+        }
+
+        .left-column, .right-column {
+            width: 45%; /* Set width for both columns */
+            margin: 0 20px; /* Add space between columns */
+            border: 1px solid black; /* Optional: Add border */
+            padding: 20px; /* Add padding inside columns */
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif;
+            color: black;
+            font-size: 18px; /* Font size for paragraph text */
+            line-height: 1.5; /* Improve readability */
+        }
+        
+        .x {
+            position: absolute;
+            top: 80px; 
+            left: 1720px;
+            height: 40px;
+            width: auto;
+        }
+        
+        .ig {
+            position: absolute;
+            top: 80px;
+            left: 1650px;
+            height: 40px;
+            width: auto;
+        }
+        
+        .bottom-logo {
+            position: absolute;
+            bottom: -630px; /* Adjust this value to align with the bottom of the h5 container */
+            left: 240px; /* Adjust this value to position it horizontally as needed */
+            height: 70px; /* Height of the logo */
+            width: auto; 
+        }
+      
+        .contact-us {
+            position: absolute;
+            bottom: -635px; /* Matches bottom logo position */
+            left: 625px; /* Matches bottom logo alignment */
+            font-family: 'Didact Gothic', serif;
+            color: black;
+            font-size: 26px;
+            font-weight: bold;
+        }
+      
+        .connect {
+            position: absolute;
+            bottom: -675px; /* Matches bottom logo position */
+            left: 900px; /* Matches bottom logo alignment */
+            font-family: 'Didact Gothic', serif;
+            color: black;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .contact-us span,
+        .connect span {
+            font-size: 18px; /* Make Mail, Instagram, and X smaller */
+        }
+        
+        .contact-us a,
+        .connect a {
+            text-decoration: none; /* Remove underline */
+            color: black; /* Keep links always black */
+            font-weight: bold;
+            transition: border-bottom 0.3s ease-in-out;
+        }
+
+        .contact-us a:hover,
+        .connect a:hover {
+            color: gold; /* Subtle underline on hover */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://x.com/renkokscouting?lang=en" target="_blank">
+            <img src="X LOGO.png" alt="X Social Media Logo" class="x">
+        </a>
+        <a href="https://www.instagram.com/renkokscouting/" target="_blank">
+            <img src="Instagram LOGO.png" alt="Instagram Social Media Logo" class="ig">
+        </a> 
+
+        <div class="hl"></div>
+        <div class="navbar">
+            <ul>
+                <img src="RKS LOGO.png" alt="Ren Kok Scouting Logo" class="logo-image">
+                <img src="RKS Laptop.png" alt="RKS Laptop" class="laptop-image"> 
+                <li><a href="#home">HOME</a></li>
+                <li class="dropdown">
+                    <a href="#prospectsboard" class="dropbtn">PROFILES</a>
+                    <div class="dropdown-content">
+                        <a href="#players">Players Get Scouted</a>
+                        <a href="#collegecoaches">College Coaches</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#rankings" class="dropbtn">RANKINGS</a>
+                    <div class="dropdown-content">
+                        <a href="#howwerank">How We Rank</a>
+                        <a href="#toprankings">Top Rankings</a>
+                    </div>
+                </li>
+                <li><a href="#aboutus">ABOUT US</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="scouting-section">
+        <h2>GET SCOUTED NOW</h2>
+        <div class="scouting-reports">
+            <div class="left-column">
+                <h3>Highlight Scouting Report</h3>
+                <h4>$25</h4>
+                <p>Using your highlight tape, I will create a detailed scouting report based on my grading scale, outlining your strengths, weaknesses, and other key information for coaches. You will receive the report via email, and it will also be uploaded to my prospect boards, where your information is stored and shared with over 160 programs weekly.</p>
+            </div>
+            <div class="right-column">
+                <h3>3 Full Game Scouting Report</h3>
+                <h4>$50</h4>
+                <p>This report follows the NFL scouting standard, requiring three full games of film for evaluation. I will create a highly detailed, four-page scouting report breaking down your game. Once completed, the report will be sent to you via email and can also be posted on social media upon request. If you receive a high grade, I will personally send it to coaches individually. Additionally, this earns you a spot on my prospect boards.</p>
+            </div>
+        </div>
+    </div>
+
+    <p class="contact-us">
+        CONTACT US <br>
+        <span><a href="mailto:renkokscouting@gmail.com" target="_self" style="text-decoration:none">renkokscouting@gmail.com</a></span>
+    </p>
+ 
+    <p class="connect"> 
+        CONNECT <br>
+        <span>
+            <a href="https://www.instagram.com/renkokscouting/" target="_blank" style="text-decoration:none">Instagram</a><br>
+            <a href="https://x.com/renkokscouting?lang=en" style="text-decoration:none" target="_blank">X</a>
+        </span>
+    </p>
+
+    <img src="RKS LOGO.png" alt="Ren Kok Scouting Logo" class="bottom-logo">
+</body>
+</html>
