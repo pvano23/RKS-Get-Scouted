@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Landing Page RKS</title>
+    <title>Players Get Scouted</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Oswald:400,700,900|Didact Gothic" rel="stylesheet"> 
@@ -14,6 +14,7 @@
             flex-direction: column;
             align-items: center;
         }
+      
       
         .container { /* Rectangle */
             width: 99%;
@@ -32,7 +33,6 @@
             bottom: 0;
             justify-content: center;
         }
-
         .navbar ul {
             list-style-type: none; 
             margin: 0; 
@@ -40,7 +40,6 @@
             display: flex;
             justify-content: center;
         }
-        
         .navbar a {
             font-size: 20px;
             font-family: 'Roboto', sans-serif;
@@ -69,7 +68,7 @@
             max-width: 300px; /* Set a maximum width if needed */
         }
       
-        .dropdown:hover .dropdown-content {
+        .dropdown:hover  .dropdown-content {
             display: block; /* Show dropdown on hover */
         }
         
@@ -105,31 +104,9 @@
             width: auto; /* Maintain aspect ratio */
             bottom: 25px;
             left: 960px;
+            
         }
       
-        .title-text {
-            position: relative; 
-            text-align: left; /* Align text to the left */
-            margin-top: 25px; 
-            margin-left: 475px; /* Set left margin to 0 for alignment */
-        }
-        
-        h1 {
-            font-family: 'Oswald', serif;
-            font-weight: 900;
-            color: black;
-            font-size: 80px;
-            margin: 140px 0 20px 0;
-            text-align: left;
-        }
-        
-        h2 {
-            font-family: 'Roboto', serif;
-            color: gold;
-            font-size: 52px;
-            font-weight: 900;
-            margin: 0px;
-        }
       
         .body-text {
             display: flex; /* Enable flexbox for body-text */
@@ -146,72 +123,105 @@
             margin-left: 200px; /* Align with the h5 container */
         }
         
-        h3 {
+        h1 {
             font-family: 'Roboto', serif;
             color: black;
             font-size: 62px;
             margin: 10px; /* Margin for h3 */
         }
       
-        h4 {
-            font-family: 'Didact Gothic', serif;
-            color: gold;
-            font-size: 26px;
-            margin: 10px 0; /* Margin for price */
+        h2 {
+            font-family: 'Oswald', serif;
+            font-weight: 900;
+            color: black;
+            font-size: 62px;
+            margin: 10px; 
+            margin-left: 10px
+           
         }
       
-        h5 {
+        h3 {
             font-weight: normal;
-            font-family: 'Didact Gothic', serif;
+          font-family: 'Didact Gothic', serif;
             color: black;
             font-size: 32px;
             margin: 12px 0 80px 10px; /* Adjust margin to align with previous headings */
             align-self: flex-start; /* Align h5 with left */
         }
        
-        .h5-container {
-            display: flex; 
-            flex-direction: column; 
-            align-items: flex-start;
-            position: relative;
-            width: 110%;
-            margin-left: 180px; /* Adjust this value to shift it further right */
+        .h3-container {
+          display: flex; 
+          flex-direction: column; 
+          align-items: flex-start;
+          position: relative;
+          width: 110%;
+          margin-left: 180px; /* Adjust this value to shift it further right */
+      }
+
+
+        .h3-container::before,
+        .h3-container::after {
+            content: ''; /* Create empty content for lines */
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 2px; /* Height of the lines */
+            background-color: black; /* Color of the lines */
+            transition: opacity 0.3s; /* Smooth transition for opacity */
         }
 
-        h6 {
+        .h3-container::before {
+            top: 0px; /* Adjust this value to move the top line closer to the text */
+        }
+
+        .h3-container::after {
+            bottom: 0px; /* Move the bottom line up more */
+        }
+
+        .h3-container:hover::before,
+        .h3-container:hover::after {
+            opacity: 0;
+        }
+
+        .h3-container:hover h3 {
+            background-color: gold; 
+            color: black; /* Change text color if needed */
+            padding: 10px; /* Add padding for the background */
+      }
+          
+      h4 {
+            font-weight: normal;
             font-family: 'Didact Gothic', serif;
             color: black;
             font-size: 26px;
-            margin-left: auto; /* Pushes text to the right */
-            align-self: flex-end; /* Align to the right */
-            margin-top: 10px; /* Adjust spacing */
+            margin-top: 40px;
+           margin-left: 380px;
         }
-
-        .scouting-section {
-            text-align: center; /* Center the heading */
-            margin: 40px 0; /* Add some margin for spacing */
-        }
-
-        .scouting-reports {
-            display: flex; /* Use flexbox for layout */
-            justify-content: center; /* Center columns */
-            margin-top: 20px; /* Space between heading and columns */
-        }
-
-        .left-column, .right-column {
-            width: 45%; /* Set width for both columns */
-            margin: 0 20px; /* Add space between columns */
-            border: 1px solid black; /* Optional: Add border */
-            padding: 20px; /* Add padding inside columns */
-        }
-
-        p {
-            font-family: 'Roboto', sans-serif;
+      
+       h5 {
+            font-weight: normal;
+            font-family: 'Didact Gothic', serif;
             color: black;
-            font-size: 18px; /* Font size for paragraph text */
-            line-height: 1.5; /* Improve readability */
+            font-size: 26px;
+            margin-top: -120px;
+           margin-left: 900px;
+         
         }
-        
+      
+        .price {
+            font-family: 'Roboto', serif;
+            background-color: gold;
+            color: black;
+            font-size: 38px; /* Font size for prices */
+            margin: 5px 0; /* Space above and below price */
+            margin-left: 510px; /* Align price with Highlight Scouting Report */
+        }
+
+      /* Additional styling for the second price */
+      .price:last-of-type {
+          margin-left: 1050px; /* Align price with 3 FULL GAME SCOUTING REPORT */
+      }
+       
         .x {
             position: absolute;
             top: 80px; 
@@ -236,43 +246,45 @@
             width: auto; 
         }
       
-        .contact-us {
-            position: absolute;
-            bottom: -635px; /* Matches bottom logo position */
-            left: 625px; /* Matches bottom logo alignment */
-            font-family: 'Didact Gothic', serif;
-            color: black;
-            font-size: 26px;
-            font-weight: bold;
-        }
+      .contact-us {
+          position: absolute;
+          bottom: -875px; /* Matches bottom logo position */
+          left: 475px; /* Matches bottom logo alignment */
+          font-family: 'Didact Gothic', serif;
+          color: black;
+          font-size: 26px;
+          font-weight: bold;
+      }
       
-        .connect {
-            position: absolute;
-            bottom: -675px; /* Matches bottom logo position */
-            left: 900px; /* Matches bottom logo alignment */
-            font-family: 'Didact Gothic', serif;
-            color: black;
-            font-size: 26px;
-            font-weight: bold;
-        }
+      .connect {
+          position: absolute;
+          bottom: -910px; /* Matches bottom logo position */
+          left: 900px; /* Matches bottom logo alignment */
+          font-family: 'Didact Gothic', serif;
+          color: black;
+          font-size: 26px;
+          font-weight: bold;
+      }
 
-        .contact-us span,
-        .connect span {
-            font-size: 18px; /* Make Mail, Instagram, and X smaller */
-        }
-        
-        .contact-us a,
-        .connect a {
-            text-decoration: none; /* Remove underline */
-            color: black; /* Keep links always black */
-            font-weight: bold;
-            transition: border-bottom 0.3s ease-in-out;
-        }
+      .contact-us span,
+      .connect span {
+          font-size: 18px; /* Make Mail, Instagram, and X smaller */
+         
+      }
+      
+      .contact-us a,
+      .connect a {
+          text-decoration: none; /* Remove underline */
+          color: black; /* Keep links always black */
+          font-weight: bold;
+          transition: border-bottom 0.3s ease-in-out;
+      }
 
-        .contact-us a:hover,
-        .connect a:hover {
-            color: gold; /* Subtle underline on hover */
-        }
+      .contact-us a:hover,
+      .connect a:hover {
+         color: gold; /* Subtle underline on hover */
+      }
+
 
     </style>
 </head>
@@ -289,7 +301,10 @@
         <div class="navbar">
             <ul>
                 <img src="RKS LOGO.png" alt="Ren Kok Scouting Logo" class="logo-image">
-                <img src="RKS Laptop.png" alt="RKS Laptop" class="laptop-image"> 
+                 
+              <img src="RKS Laptop.png" alt="RKS Laptop" class="laptop-image"> 
+              
+               
                 <li><a href="#home">HOME</a></li>
                 <li class="dropdown">
                     <a href="#prospectsboard" class="dropbtn">PROFILES</a>
@@ -298,6 +313,7 @@
                         <a href="#collegecoaches">College Coaches</a>
                     </div>
                 </li>
+               
                 <li class="dropdown">
                     <a href="#rankings" class="dropbtn">RANKINGS</a>
                     <div class="dropdown-content">
@@ -310,35 +326,41 @@
         </div>
     </div>
     
-    <div class="scouting-section">
-        <h2>GET SCOUTED NOW</h2>
-        <div class="scouting-reports">
-            <div class="left-column">
-                <h3>Highlight Scouting Report</h3>
-                <h4>$25</h4>
-                <p>Using your highlight tape, I will create a detailed scouting report based on my grading scale, outlining your strengths, weaknesses, and other key information for coaches. You will receive the report via email, and it will also be uploaded to my prospect boards, where your information is stored and shared with over 160 programs weekly.</p>
-            </div>
-            <div class="right-column">
-                <h3>3 Full Game Scouting Report</h3>
-                <h4>$50</h4>
-                <p>This report follows the NFL scouting standard, requiring three full games of film for evaluation. I will create a highly detailed, four-page scouting report breaking down your game. Once completed, the report will be sent to you via email and can also be posted on social media upon request. If you receive a high grade, I will personally send it to coaches individually. Additionally, this earns you a spot on my prospect boards.</p>
-            </div>
+
+    <div class="body-text"> 
+        <div class="heading-row">
+            <h1>GET</h1>
+            <h2>SCOUTED</h2>
         </div>
-    </div>
+      
+        <div class="h3-container">
+            <h3>Get scouted now with your own personalized scouting report and be added to my prospect boards, which are sent to over 160 programs across North America. These include D1-D3, U Sports, CJFL, JUCO, and NAIA programs. This is a one-time fee—no subscription required.</h3> 
+        
+         
 
-    <p class="contact-us">
-        CONTACT US <br>
-        <span><a href="mailto:renkokscouting@gmail.com" target="_self" style="text-decoration:none">renkokscouting@gmail.com</a></span>
-    </p>
+            <p class="contact-us">
+              CONTACT US <br>
+              <span><a href="mailto:renkokscouting@gmail.com" target="_self" style="text-decoration:none">renkokscouting@gmail.com</a></span>
+          </p>
  
-    <p class="connect"> 
-        CONNECT <br>
-        <span>
-            <a href="https://www.instagram.com/renkokscouting/" target="_blank" style="text-decoration:none">Instagram</a><br>
-            <a href="https://x.com/renkokscouting?lang=en" style="text-decoration:none" target="_blank">X</a>
-        </span>
-    </p>
+          <p class="connect"> 
+              CONNECT <br>
+              <span>
+                  <a href="https://www.instagram.com/renkokscouting/" target="_blank" style="text-decoration:none">Instagram</a><br>
+                  <a href="https://x.com/renkokscouting?lang=en" style="text-decoration:none" target="_blank">X</a>
+              </span>
+          </p>
+       </div>
+      
+      <h4>HIGHLIGHT SCOUTING REPORT</h4>
+       <p class="price">$25</p>
+      
+       <h5>3 FULL GAME SCOUTING REPORT</h5>
+        <p class="price">$50</p>
+          
+        <img src="RKS LOGO.png" alt="Ren Kok Scouting Logo" class="bottom-logo">
+    </div>
+  
 
-    <img src="RKS LOGO.png" alt="Ren Kok Scouting Logo" class="bottom-logo">
-</body>
+  </body>
 </html>
