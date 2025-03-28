@@ -12,7 +12,7 @@
     <style>
         body {
             margin: 0;
-            height: 250vh;
+            height: 295vh;
             display: flex; /* Enable flexbox */ 
             flex-direction: column;
             align-items: center;
@@ -21,7 +21,7 @@
       
         .container { /* Rectangle */
             width: 99%;
-            height: 17.5%;
+            height: 15%;
             border: 2px solid black; 
             position: relative;
             display: flex;
@@ -30,7 +30,7 @@
         
         .navbar {
             width: 100%; /* Make navbar full width */
-            height: 23%;
+            height: 26%;
             background-color: black; 
             position: absolute; 
             bottom: 0;
@@ -176,7 +176,7 @@
         }
 
         .h3-container::after {
-            bottom: 200px; /* Move the bottom line up more */
+            bottom: 20px; /* Move the bottom line up more */
         }
 
         .h3-container:hover::before,
@@ -266,14 +266,53 @@
         }
         
      
+
+    .user-info {
+        margin-bottom: 22px; 
+       font-family: 'Didact Gothic', sans-serif; font-size: 22px;
+    }
+
+      .fillouttitle {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 600;
+        font-size: 56px;
+      }
       
-      .form-label {
-    margin-bottom: 14px; /* Increase space below the label */
+      .payment {
+        font-family: 'Didact Gothic', sans-serif;
+        font-size: 22px;
+        margin-bottom: 26px; 
+        margin-top: -70px;
+    
+      }
+      
+      .submit {
+        background-color: gold; /* Set background color to gold */
+        border: none;
+        color: black; /* Set text color to white for contrast */
+        width: 40%; /* Full width */
+        padding: 14px; /* Adjust padding as needed */
+        margin-left: 120px;
+        cursor: pointer; /* Change cursor to pointer */
+        transition: background-color 0.3s; /* Smooth transition */
+    }
+
+    .submit:hover {
+        background-color: #e5b700; /* Darker gold on hover */
 }
 
-.mb-6 {
-    margin-bottom: 22px; /* Increase space between form groups */
-}
+      input {
+        font-family: 'Didact Gothic';
+        font-size: 18px;
+        border: 2px solid black; /* Light grey border */
+        border-radius: 0; /* Remove rounding for squared corners */
+        background-color: #CAD0D4; 
+        color: black;
+        padding: 12px; /* Adjust padding for comfort */
+        width: 100%; /* Ensure full width */
+        
+    }
+      
 
 
     </style>
@@ -326,20 +365,6 @@
         <div class="h3-container">
             <h3>Get scouted now with your own personalized scouting report and be added to my prospect boards, which are sent to over 160 programs across North America. These include D1-D3,<br> U Sports, CJFL, JUCO, and NAIA programs. This is a one-time fee—no subscription required.</h3> 
         
-         
-
-            <p class="contact-us">
-              CONTACT US <br>
-              <span><a href="mailto:renkokscouting@gmail.com" target="_self" style="text-decoration:none">renkokscouting@gmail.com</a></span>
-          </p>
- 
-          <p class="connect"> 
-              CONNECT <br>
-              <span>
-                  <a href="https://www.instagram.com/renkokscouting/" target="_blank" style="text-decoration:none">Instagram</a><br>
-                  <a href="https://x.com/renkokscouting?lang=en" style="text-decoration:none" target="_blank">X</a>
-              </span>
-          </p>
        </div>
       
       <h4>HIGHLIGHT SCOUTING REPORT</h4>
@@ -353,78 +378,77 @@
 
     </div>
   
-  <div class="flex items-center justify-center min-h-screen bg-gray-900">
-  
-    <div class="max-w-md mx-auto my-10 bg-gray-800 p-5 rounded-md shadow-sm">
-      <div class="text-center">
-        <h1 class="my-3 text-3xl font-semibold text-gray-100">
+        <p
+         class="fillouttitle">
           FILL OUT THE FORM
-        </h1>
-        <p class="text-gray-400 dark:text-gray-400">
+      </p>
+          
+          
+        <p class="payment">
           Please pay upon completing the form. the payment link can be found here
         </p>
-      </div>
+     
       <div class="m-7">
         <form action="https://api.web3forms.com/submit" method="POST" id="form">
           <input type="hidden" name="access_key" value="c601df75-3a8d-4459-8abd-c71b7c108d90" />
           <input type="hidden" name="subject" value="New Submission from Web3Forms" />
           <input type="checkbox" name="botcheck" id="" style="display: none;" />
 
-          <div class="mb-6">
-            <label for="email" class="block mb-2 text-sm text-gray-400">Email*</label>
-            <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          <div class="user-info">
+            <label for="email">Email*</label>
+            <input type="email" name="email" id="email" required/>
           </div>
           
-          <div class="mb-6">
-            <label for="height_weight" class="block mb-2 text-sm text-gray-400">Height and Weight*</label>
-            <input type="text" name="height_weight" id="height_weight" placeholder="e.g., 6'2", 190 lbs" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          <div class="user-info">
+            <label for="height_weight">Height and Weight*</label>
+            <input type="text" name="Height and Weight" id="Height and Weight" required/>
+            
           </div>
           
-          <div class="mb-6">
-            <label for="recruiting_class" class="block mb-2 text-sm text-gray-400">Recruiting Class*</label>
-            <input type="text" name="recruiting_class" id="recruiting_class" placeholder="e.g., 2025" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          <div class="user-info">
+            <label for="recruiting_class">Recruiting Class*</label>
+            <input type="text" name="Recruiting class" id="recruiting_class" required/>
           </div>
 
-          <div class="mb-6">
-            <label for="ncaa_id" class="block mb-2 text-sm text-gray-400">NCAA ID*</label>
-            <input type="text" name="ncaa_id" id="ncaa_id" placeholder="NCAA ID" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          <div class="user-info">
+            <label for="ncaa_id">NCAA ID*</label>
+            <input type="text" name="NCAA ID" id="ncaa_id" required/>
           </div>
 
-          <div class="mb-6">
-            <label for="social_usernames" class="block mb-2 text-sm text-gray-400">Instagram and X Usernames*</label>
-            <input type="text" name="social_usernames" id="social_usernames" placeholder="Instagram, X (Twitter)" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          <div class="user-info">
+            <label for="social_usernames">Instagram and X Usernames*</label>
+            <input type="text" name="Usernames" id="social_usernames" required/>
           </div>
 
-          <div class="mb-6">
-            <label for="academic_program" class="block mb-2 text-sm text-gray-400">Academic Program Desired*</label>
-            <input type="text" name="academic_program" id="academic_program" placeholder="e.g., Business, Engineering" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          <div class="user-info">
+            <label for="academic_program">Academic Program Desired*</label>
+            <input type="text" name="Academic Program" id="academic_program" required/>
           </div>
 
-          <div class="mb-6">
-            <label for="current_team" class="block mb-2 text-sm text-gray-400">Current Team and Location*</label>
-            <input type="text" name="current_team" id="current_team" placeholder="e.g., Team ABC, Location XYZ" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          <div class="user-info">
+            <label for="current_team">Current Team and Location*</label>
+            <input type="text" name="Current Team and Location" id="current_team" required/> 
           </div>
 
-          <div class="mb-6">
+          <div class="user-info">
             <label for="gpa" class="block mb-2 text-sm text-gray-400">GPA*</label>
-            <input type="text" name="gpa" id="gpa" placeholder="e.g., 3.8" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+            <input type="text" name="GPA" id="gpa" required/>
           </div>
 
-          <div class="mb-6">
+          <div class="user-info">
             <label for="film_link" class="block mb-2 text-sm text-gray-400">Film Link*</label>
-            <input type="url" name="film_link" id="film_link" placeholder="e.g., https://youtube.com/yourlink" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+            <input type="url" name="Film Link" id="film_link" required/>
           </div>
 
-          <div class="mb-6">
-            <button type="submit" class="w-full bg-indigo-600 inline-block text-white no-underline hover:text-indigo-100 py-4 px-4 rounded-sm focus:outline-none">
+          <div class="user-info">
+            <button type="submit" class="submit">
               Submit
             </button>
           </div>
           <p class="text-base text-center text-gray-400" id="result"></p>
         </form>
       </div>
-    </div>
-  </div>
+   
 
 
 <script>
@@ -453,13 +477,11 @@
         let json = await response.json();
         if (response.status === 200) {
           result.innerHTML = json.message;
-          result.classList.remove("text-gray-500");
-          result.classList.add("text-green-500");
+         
         } else {
           console.log(response);
           result.innerHTML = json.message;
-          result.classList.remove("text-gray-500");
-          result.classList.add("text-red-500");
+          
         }
       })
       .catch((error) => {
@@ -475,7 +497,5 @@
   });
 </script>
 
-                                       
-
-  </body>
+  </body>    
 </html>
