@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  
+  <!---created by Paige Van Overberghe on March 24---> 
+  
     <title>Players Get Scouted</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +12,7 @@
     <style>
         body {
             margin: 0;
-            height: 200vh;
+            height: 250vh;
             display: flex; /* Enable flexbox */ 
             flex-direction: column;
             align-items: center;
@@ -27,7 +30,7 @@
         
         .navbar {
             width: 100%; /* Make navbar full width */
-            height: 28%;
+            height: 23%;
             background-color: black; 
             position: absolute; 
             bottom: 0;
@@ -36,7 +39,7 @@
         .navbar ul {
             list-style-type: none; 
             margin: 0; 
-            padding: 26px; 
+            padding: 28px; 
             display: flex;
             justify-content: center;
         }
@@ -92,7 +95,7 @@
         
         img {
             position: absolute;
-            bottom: 160px;
+            bottom: 120px;
             left: 30px;
             height: 90px;
             width: auto;
@@ -163,7 +166,7 @@
             position: absolute;
             left: 0;
             right: 0;
-            height: 2px; /* Height of the lines */
+            height:1px; /* Height of the lines */
             background-color: black; /* Color of the lines */
             transition: opacity 0.3s; /* Smooth transition for opacity */
         }
@@ -173,7 +176,7 @@
         }
 
         .h3-container::after {
-            bottom: 0px; /* Move the bottom line up more */
+            bottom: 200px; /* Move the bottom line up more */
         }
 
         .h3-container:hover::before,
@@ -192,7 +195,7 @@
             font-family: 'Didact Gothic', serif;
             color: black;
             font-size: 22px;
-            margin-top: 45px;
+            margin-bottom: 30px;
            margin-left: 380px;
         }
       
@@ -249,7 +252,7 @@
         .x {
             position: absolute;
             top: 80px; 
-            left: 1375px;
+            left: 1360px;
             height: 40px;
             width: auto;
         }
@@ -262,52 +265,15 @@
             width: auto;
         }
         
-        .bottom-logo {
-            position: absolute;
-            bottom: -880px; /* Adjust this value to align with the bottom of the h5 container */
-            left: 240px; /* Adjust this value to position it horizontally as needed */
-            height: 70px; /* Height of the logo */
-            width: auto; 
-        }
+     
       
-      .contact-us {
-          position: absolute;
-          bottom: -1090px; /* Matches bottom logo position */
-          left: 475px; /* Matches bottom logo alignment */
-          font-family: 'Didact Gothic', serif;
-          color: black;
-          font-size: 26px;
-          font-weight: bold;
-      }
-      
-      .connect {
-          position: absolute;
-          bottom: -1135px; /* Matches bottom logo position */
-          left: 900px; /* Matches bottom logo alignment */
-          font-family: 'Didact Gothic', serif;
-          color: black;
-          font-size: 26px;
-          font-weight: bold;
-      }
+      .form-label {
+    margin-bottom: 14px; /* Increase space below the label */
+}
 
-      .contact-us span,
-      .connect span {
-          font-size: 18px; /* Make Mail, Instagram, and X smaller */
-         
-      }
-      
-      .contact-us a,
-      .connect a {
-          text-decoration: none; /* Remove underline */
-          color: black; /* Keep links always black */
-          font-weight: bold;
-          transition: border-bottom 0.3s ease-in-out;
-      }
-
-      .contact-us a:hover,
-      .connect a:hover {
-         color: gold; /* Subtle underline on hover */
-      }
+.mb-6 {
+    margin-bottom: 22px; /* Increase space between form groups */
+}
 
 
     </style>
@@ -381,12 +347,135 @@
       <p class="left-text">Using your highlight tape, I will create a detailed scouting report based <br>on my grading scale, outlining your strengths, weaknesses, and other <br>key information for coaches. You will receive the report via email, and it <br>will also be uploaded to my prospect boards, where your information is <br>stored and shared with over 160 programs weekly.</p>
        
         <h5>3 FULL GAME SCOUTING REPORT</h5>
-       <p class="price2">$50</p>
+       <p class="price2">$65</p>
       <p class="right-text">This report follows the NFL scouting standard, requiring three full games of film for evaluation. I will create a highly detailed, four-page scouting report breaking down your game. Once completed, the report will be sent to you via email and can also be posted on social media upon request. If you receive a high grade, I will personally send it to coaches individually. Additionally, this earns you a spot on my prospect boards.</p>
       
-        <img src="RKS LOGO.png" alt="Ren Kok Scouting Logo" class="bottom-logo">
+
     </div>
   
+  <div class="flex items-center justify-center min-h-screen bg-gray-900">
+  
+    <div class="max-w-md mx-auto my-10 bg-gray-800 p-5 rounded-md shadow-sm">
+      <div class="text-center">
+        <h1 class="my-3 text-3xl font-semibold text-gray-100">
+          FILL OUT THE FORM
+        </h1>
+        <p class="text-gray-400 dark:text-gray-400">
+          Please pay upon completing the form. the payment link can be found here
+        </p>
+      </div>
+      <div class="m-7">
+        <form action="https://api.web3forms.com/submit" method="POST" id="form">
+          <input type="hidden" name="access_key" value="c601df75-3a8d-4459-8abd-c71b7c108d90" />
+          <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+          <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+          <div class="mb-6">
+            <label for="email" class="block mb-2 text-sm text-gray-400">Email*</label>
+            <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          </div>
+          
+          <div class="mb-6">
+            <label for="height_weight" class="block mb-2 text-sm text-gray-400">Height and Weight*</label>
+            <input type="text" name="height_weight" id="height_weight" placeholder="e.g., 6'2", 190 lbs" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          </div>
+          
+          <div class="mb-6">
+            <label for="recruiting_class" class="block mb-2 text-sm text-gray-400">Recruiting Class*</label>
+            <input type="text" name="recruiting_class" id="recruiting_class" placeholder="e.g., 2025" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          </div>
+
+          <div class="mb-6">
+            <label for="ncaa_id" class="block mb-2 text-sm text-gray-400">NCAA ID*</label>
+            <input type="text" name="ncaa_id" id="ncaa_id" placeholder="NCAA ID" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          </div>
+
+          <div class="mb-6">
+            <label for="social_usernames" class="block mb-2 text-sm text-gray-400">Instagram and X Usernames*</label>
+            <input type="text" name="social_usernames" id="social_usernames" placeholder="Instagram, X (Twitter)" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          </div>
+
+          <div class="mb-6">
+            <label for="academic_program" class="block mb-2 text-sm text-gray-400">Academic Program Desired*</label>
+            <input type="text" name="academic_program" id="academic_program" placeholder="e.g., Business, Engineering" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          </div>
+
+          <div class="mb-6">
+            <label for="current_team" class="block mb-2 text-sm text-gray-400">Current Team and Location*</label>
+            <input type="text" name="current_team" id="current_team" placeholder="e.g., Team ABC, Location XYZ" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          </div>
+
+          <div class="mb-6">
+            <label for="gpa" class="block mb-2 text-sm text-gray-400">GPA*</label>
+            <input type="text" name="gpa" id="gpa" placeholder="e.g., 3.8" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          </div>
+
+          <div class="mb-6">
+            <label for="film_link" class="block mb-2 text-sm text-gray-400">Film Link*</label>
+            <input type="url" name="film_link" id="film_link" placeholder="e.g., https://youtube.com/yourlink" required class="w-full px-3 py-2 h-12 rounded-sm placeholder-gray-500 text-gray-900 bg-gray-100 text-sm focus:outline-none" />
+          </div>
+
+          <div class="mb-6">
+            <button type="submit" class="w-full bg-indigo-600 inline-block text-white no-underline hover:text-indigo-100 py-4 px-4 rounded-sm focus:outline-none">
+              Submit
+            </button>
+          </div>
+          <p class="text-base text-center text-gray-400" id="result"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+  const form = document.getElementById("form");
+  const result = document.getElementById("result");
+
+  form.addEventListener("submit", function (e) {
+    const formData = new FormData(form);
+    e.preventDefault();
+    let object = {};
+    formData.forEach((value, key) => {
+      object[key] = value;
+    });
+    let json = JSON.stringify(object);
+    result.innerHTML = "Please wait...";
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status === 200) {
+          result.innerHTML = json.message;
+          result.classList.remove("text-gray-500");
+          result.classList.add("text-green-500");
+        } else {
+          console.log(response);
+          result.innerHTML = json.message;
+          result.classList.remove("text-gray-500");
+          result.classList.add("text-red-500");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        result.innerHTML = "Something went wrong!";
+      })
+      .then(function () {
+        form.reset();
+        setTimeout(() => {
+          result.style.display = "none";
+        }, 5000);
+      });
+  });
+</script>
+
+                                       
 
   </body>
 </html>
