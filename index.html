@@ -11,31 +11,32 @@
     
     <style>
         body {
-            margin: 0;
-            height: 295vh;
-            display: flex; /* Enable flexbox */ 
-            flex-direction: column;
-            align-items: center;
-        }
-      
-      
-        .container { /* Rectangle */
-            width: 99%;
-            height: 15%;
-            border: 2px solid black; 
-            position: relative;
-            display: flex;
-            margin-top: 2%; 
-        }
-        
-        .navbar {
-            width: 100%; /* Make navbar full width */
-            height: 26%;
-            background-color: black; 
-            position: absolute; 
-            bottom: 0;
-            justify-content: center;
-        }
+          margin: 0;
+          height: 295vh;
+          display: flex; 
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .container {
+          width: 99%;
+          height: 15%;
+          border: 2px solid black; 
+          position: relative;
+          display: flex;
+          margin-top: 2%; 
+      }
+       .navbar {
+          width: 100%; /* Full width */
+          height: 78px; /* Set a fixed height */
+          background-color: black; 
+          position: absolute; 
+          bottom: 0;
+          display: flex; /* Use flexbox for alignment */
+          justify-content: center;
+          align-items: center; /* Center items vertically */
+          z-index: 10; /* Ensure it's above other content */
+      }
         .navbar ul {
             list-style-type: none; 
             margin: 0; 
@@ -92,6 +93,7 @@
         .dropdown-content a:hover {
             background-color: gold; 
         }
+      
         
         img {
             position: absolute;
@@ -101,7 +103,7 @@
             width: auto;
         }
       
-        .laptop-image {
+         .laptop-image {
             position: absolute;
             height: 250px; /* Adjust height as needed */
             width: auto; /* Maintain aspect ratio */
@@ -157,9 +159,20 @@
           align-items: flex-start;
           position: relative;
           width: 110%;
-          margin-left: 180px; /* Adjust this value to shift it further right */
+          margin-left: 180px; 
       }
 
+      .h3-container h3 {
+          font-weight: normal;
+          font-family: 'Didact Gothic', serif;
+          color: black;
+          margin: 12px 0; /* Keep margins consistent */
+          padding: 10px; /* Add padding to create space */
+          transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+          box-sizing: border-box; /* Include padding in width/height calculations */
+      }
+
+      
         .h3-container::before,
         .h3-container::after {
             content: ''; /* Create empty content for lines */
@@ -185,9 +198,9 @@
         }
 
         .h3-container:hover h3 {
-            background-color: gold; 
-            color: black; /* Change text color if needed */
-            padding: 10px; /* Add padding for the background */
+          background-color: gold; 
+          color: black; /* Change text color if needed */
+          padding: 10px; /* Add padding for the background without affecting layout */
       }
           
       h4 {
@@ -252,7 +265,7 @@
         .x {
             position: absolute;
             top: 80px; 
-            left: 1360px;
+            left: 1375px;
             height: 40px;
             width: auto;
         }
@@ -381,7 +394,7 @@
         <p
          class="fillouttitle">
           FILL OUT THE FORM
-      </p>
+  </p>
           
           
         <p class="payment">
