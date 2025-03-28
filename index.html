@@ -463,58 +463,59 @@
               Submit
             </button>
           </div>
-          <p class="text-base text-center text-gray-400" id="result"></p>
+          <p class="" id="result"></p>
        
         </form>
-        <p id="success-message" style="display: none;">Email sent to Ren Kok</p>
+        <p id="success-message" style="display: none;">Email sent to Ren Kok!</p>
     </div>
     
 
 <script>
   
-  
   const form = document.getElementById("form");
   const result = document.getElementById("result");
 
-  form.addEventListener("submit", function (e) {
+ form.addEventListener("submit", function (e) {
     const formData = new FormData(form);
     e.preventDefault();
     let object = {};
     formData.forEach((value, key) => {
-      object[key] = value;
+        object[key] = value;
     });
     let json = JSON.stringify(object);
-    result.innerHTML = "Please wait...";
 
     fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: json
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+        },
+        body: json
     })
-      .then(async (response) => {
+    .then(async (response) => {
         let json = await response.json();
         if (response.status === 200) {
-          result.innerHTML = json.message;
-         
-        } else {
-          console.log(response);
-          result.innerHTML = json.message;
-          
+            document.getElementById("success-message").style.display = "block"; // Show success message
+            document.getElementById("success-message").innerText = "Email sent to Ren Kok!"; // Set message text
+           document.getElementById("success-message").style.fontFamily = 'Didact Gothic, sans-serif'; // Set font family
+        document.getElementById("success-message").style.fontSize = '22px'; // Set font size
+        document.getElementById("success-message").style.display = "block"; // Show success message
+        result.style.display = "none"; // Hide the result message
+    } else {
+            console.log(response);
+            result.innerHTML = json.message;
         }
-      })
-      .catch((error) => {
+    })
+    .catch((error) => {
         console.log(error);
         result.innerHTML = "Something went wrong!";
-      })
-      .then(function () {
+    })
+    .then(function () {
         form.reset();
         setTimeout(() => {
-          result.style.display = "none";
+            document.getElementById("success-message").style.display = "none"; // Hide success message after a while
         }, 5000);
-      });
+    });
   });
 </script>
 
