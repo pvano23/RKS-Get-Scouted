@@ -223,6 +223,53 @@
          
         }
       
+      .bottom-logo {
+            position: absolute;
+            bottom: -1760px; /* Adjust this value to align with the bottom of the h5 container */
+            left: 240px; /* Adjust this value to position it horizontally as needed */
+            height: 70px; /* Height of the logo */
+            width: auto; 
+        }
+      
+      .contact-us {
+          position: absolute;
+          bottom: -1770px; /* Matches bottom logo position */
+          left: 700px; /* Matches bottom logo alignment */
+          font-family: 'Didact Gothic', serif;
+          color: black;
+          font-size: 26px;
+          font-weight: bold;
+      }
+      
+      .connect {
+          position: absolute;
+          bottom: -200px; /* Matches bottom logo position */
+          left: 900px; /* Matches bottom logo alignment */
+          font-family: 'Didact Gothic', serif;
+          color: black;
+          font-size: 26px;
+          font-weight: bold;
+      }
+
+      .contact-us span,
+      .connect span {
+          font-size: 18px; /* Make Mail, Instagram, and X smaller */
+         
+      }
+      
+      .contact-us a,
+      .connect a {
+          text-decoration: none; /* Remove underline */
+          color: black; /* Keep links always black */
+          font-weight: bold;
+          transition: border-bottom 0.3s ease-in-out;
+      }
+
+      .contact-us a:hover,
+      .connect a:hover {
+         color: gold; /* Subtle underline on hover */
+      }
+
         .price {
             font-family: 'Oswald', serif;
             color: black;
@@ -294,10 +341,20 @@
       .payment {
         font-family: 'Didact Gothic', sans-serif;
         font-size: 22px;
-        margin-bottom: 26px; 
-        margin-top: -70px;
+        margin-bottom: 20px; 
+        margin-top: -25px;
+        margin-right: 20px;
     
       }
+      
+      .paymentlink {
+        font-family: 'Didact Gothic', sans-serif;
+        font-size: 22px;
+        margin-bottom: 30px; 
+        margin-top: -12px;
+        
+      }
+      
       
       .submit {
         background-color: gold; /* Set background color to gold */
@@ -331,11 +388,14 @@
         font-size: 18px;
         
       }
+      
+      
 
 
     </style>
 </head>
 <body>
+  
     <div class="container">
         <a href="https://x.com/renkokscouting?lang=en" target="_blank">
             <img src="X LOGO.png" alt="X Social Media Logo" class="x">
@@ -396,16 +456,37 @@
 
     </div>
   
+      <p class="contact-us">
+              CONTACT US <br>
+              <span><a href="mailto:renkokscouting@gmail.com" target="_self" style="text-decoration:none">renkokscouting@gmail.com</a></span>
+          </p>
+ 
+          <p class="connect"> 
+              CONNECT <br>
+              <span>
+                  <a href="https://www.instagram.com/renkokscouting/" target="_blank" style="text-decoration:none">Instagram</a><br>
+                  <a href="https://x.com/renkokscouting?lang=en" style="text-decoration:none" target="_blank">X</a>
+              </span>
+          </p>
+
+        <img src="RKS LOGO.png" alt="Ren Kok Scouting Logo" class="bottom-logo">
+
         <p
          class="fillouttitle">
           FILL OUT THE FORM
   </p>
           
-          
+  
         <p class="payment">
-          Please pay upon completing the form. the payment link can be found here
-        </p>
-     
+        Please pay upon completing the form. The payment link can be found here: 
+      </p>
+
+      <p class="paymentlink">
+        <a href="https://buy.stripe.com/9AQeVIcBY3XIdz2008" target="_blank" style="font-family: 'Didact Gothic', sans-ser  if; font-size: 22px; color: black;">
+            CLICK HERE TO PAY
+        </a>
+    </p>
+
       <div class="m-7">
         <form action="https://api.web3forms.com/submit" method="POST" id="form">
           <input type="hidden" name="access_key" value="c601df75-3a8d-4459-8abd-c71b7c108d90" />
@@ -467,9 +548,10 @@
        
         </form>
         <p id="success-message" style="display: none;">Email sent to Ren Kok!</p>
+        
+        
     </div>
-    
-
+  
 <script>
   
   const form = document.getElementById("form");
